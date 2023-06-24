@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { signIn, signOut } from "@auth/sveltekit/client";
-
 	import type { DefaultSession } from "@auth/core/types";
+	import { signIn, signOut } from "@auth/sveltekit/client";
 
 	export let session: DefaultSession | null;
 </script>
 
-<div class="flex flex-col h-full">
+<div class="flex h-full flex-col">
 	{#if !session?.user}
 		<button type="button" class="btn variant-filled" on:click={() => signIn("keycloak")}
 			>Log In</button>

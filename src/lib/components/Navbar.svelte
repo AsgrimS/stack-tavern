@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { AppBar, Avatar, popup } from "@skeletonlabs/skeleton";
-
-	import type { PopupSettings } from "@skeletonlabs/skeleton";
+	import UserInfo from "$lib/components/atoms/UserInfo.svelte";
 	import type { DefaultSession } from "@auth/core/types";
-	import UserInfo from "./atoms/UserInfo.svelte";
+	import type { PopupSettings } from "@skeletonlabs/skeleton";
+	import { AppBar, Avatar, popup } from "@skeletonlabs/skeleton";
 
 	const userInfoPopup: PopupSettings = {
 		event: "click",
@@ -32,7 +31,7 @@
 	</svelte:fragment>
 </AppBar>
 
-<div class="card p-4 variant-filled-secondary w-64 h-48" data-popup="userInfo">
+<div class="card variant-filled-secondary h-48 w-64 p-4" data-popup="userInfo">
 	<UserInfo {session} />
 	<div class="arrow variant-filled-secondary" />
 </div>

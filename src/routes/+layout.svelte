@@ -1,14 +1,12 @@
 <script lang="ts">
-	import "@skeletonlabs/skeleton/themes/theme-crimson.css";
-	import "@skeletonlabs/skeleton/styles/skeleton.css";
-	import "../app.postcss";
-
-	import { AppShell, storePopup } from "@skeletonlabs/skeleton";
-	import { computePosition, autoUpdate, offset, shift, flip, arrow } from "@floating-ui/dom";
-
+	import { page } from "$app/stores";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
-	import { page } from "$app/stores";
+	import "../app.postcss";
+	import { computePosition, autoUpdate, offset, shift, flip, arrow } from "@floating-ui/dom";
+	import { AppShell, storePopup } from "@skeletonlabs/skeleton";
+	import "@skeletonlabs/skeleton/styles/skeleton.css";
+	import "@skeletonlabs/skeleton/themes/theme-crimson.css";
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
 </script>

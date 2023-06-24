@@ -1,8 +1,7 @@
 <script lang="ts">
+	import { page } from "$app/stores";
 	import { AppRail, AppRailAnchor } from "@skeletonlabs/skeleton";
 	import { IconBrandGithub, IconHome } from "@tabler/icons-svelte";
-
-	import { page } from "$app/stores";
 
 	const iconsSize = 36;
 </script>
