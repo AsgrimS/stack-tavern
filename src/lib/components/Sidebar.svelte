@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { AppRail, AppRailAnchor } from "@skeletonlabs/skeleton";
-	import { IconBrandGithub, IconHome } from "@tabler/icons-svelte";
+	import { IconBrandGithub, IconHome, IconPlus } from "@tabler/icons-svelte";
 
 	const iconsSize = 36;
 </script>
@@ -12,9 +12,9 @@
 			><IconHome size={iconsSize} class="mx-auto" /></AppRailAnchor>
 	</svelte:fragment>
 	<!-- --- -->
-	<AppRailAnchor name="tile-2" value={1} title="tile-2">
-		<svelte:fragment slot="lead">(icon)</svelte:fragment>
-		<span>Tile 2</span>
+	<AppRailAnchor href="/add" selected={$page.url.pathname === "/add"} value={1}>
+		<svelte:fragment slot="lead"><IconPlus size={iconsSize} /></svelte:fragment>
+		<span>Add Stack</span>
 	</AppRailAnchor>
 	<AppRailAnchor name="tile-3" value={2} title="tile-3">
 		<svelte:fragment slot="lead">(icon)</svelte:fragment>

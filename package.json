@@ -17,6 +17,7 @@
 		"@skeletonlabs/skeleton": "^1.8.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
+		"@tailwindcss/forms": "^0.5.3",
 		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
@@ -33,11 +34,13 @@
 		"svelte": "^4.0.0",
 		"svelte-check": "^3.4.3",
 		"svelte-preprocess": "^5.0.3",
+		"sveltekit-superforms": "^1.1.2",
 		"tailwindcss": "^3.3.1",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
 		"vite": "^4.3.6",
-		"vitest": "^0.25.3"
+		"vitest": "^0.25.3",
+		"zod": "^3.21.4"
 	},
 	"type": "module",
 	"dependencies": {
