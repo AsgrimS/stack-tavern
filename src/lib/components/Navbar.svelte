@@ -1,8 +1,8 @@
 <script lang="ts">
 	import UserInfo from "$lib/components/atoms/UserInfo.svelte";
 	import type { DefaultSession } from "@auth/core/types";
-	import type { PopupSettings } from "@skeletonlabs/skeleton";
 	import { AppBar, Avatar, popup } from "@skeletonlabs/skeleton";
+	import type { PopupSettings } from "@skeletonlabs/skeleton";
 
 	const userInfoPopup: PopupSettings = {
 		event: "click",
