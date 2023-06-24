@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { AppRail, AppRailAnchor } from '@skeletonlabs/skeleton';
-	import { IconBrandGithub, IconHome } from '@tabler/icons-svelte';
+	import { AppRail, AppRailAnchor } from "@skeletonlabs/skeleton";
+	import { IconBrandGithub, IconHome } from "@tabler/icons-svelte";
 
-	import { page } from '$app/stores';
+	import { page } from "$app/stores";
 
 	const iconsSize = 36;
 </script>
 
 <AppRail>
 	<svelte:fragment slot="lead">
-		<AppRailAnchor href="/" selected={$page.url.pathname === '/'}
-			><IconHome size={iconsSize} class="mx-auto" /></AppRailAnchor
-		>
+		<AppRailAnchor href="/" selected={$page.url.pathname === "/"}
+			><IconHome size={iconsSize} class="mx-auto" /></AppRailAnchor>
 	</svelte:fragment>
 	<!-- --- -->
 	<AppRailAnchor name="tile-2" value={1} title="tile-2">
@@ -27,9 +26,7 @@
 		<AppRailAnchor
 			href="https://github.com/AsgrimS/stack-tavern"
 			target="_blank"
-			title="Repository"
-		>
-			<IconBrandGithub size={iconsSize} class="mx-auto" /></AppRailAnchor
-		>
+			title="Repository">
+			<IconBrandGithub size={iconsSize} class="mx-auto" /></AppRailAnchor>
 	</svelte:fragment>
 </AppRail>
