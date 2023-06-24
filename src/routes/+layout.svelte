@@ -8,17 +8,14 @@
 
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Sidebar from "$lib/components/Sidebar.svelte";
-
-	import type { LayoutData } from "./$types";
+	import { page } from "$app/stores";
 
 	storePopup.set({ computePosition, autoUpdate, offset, shift, flip, arrow });
-
-	export let data: LayoutData;
 </script>
 
 <AppShell>
 	<svelte:fragment slot="header">
-		<Navbar session={data.session} />
+		<Navbar session={$page.data.session} />
 	</svelte:fragment>
 	<svelte:fragment slot="sidebarLeft">
 		<Sidebar />
