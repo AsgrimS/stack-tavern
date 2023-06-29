@@ -1,4 +1,4 @@
-import { CLIENT_ID, CLIENT_SECRET, ISSUER, SVELTE_SECRET } from "$env/static/private";
+import { CLIENT_ID, CLIENT_SECRET, ISSUER, SECRET } from "$env/static/private";
 import KeycloakProvider from "@auth/core/providers/keycloak";
 import { SvelteKitAuth } from "@auth/sveltekit";
 
@@ -12,5 +12,20 @@ export const handle = SvelteKitAuth({
 			issuer: ISSUER,
 		}),
 	],
-	secret: SVELTE_SECRET,
+	secret: SECRET,
+	callbacks: {
+		async jwt({ token, account }) {
+			if (account) {
+				token.accessToken = account.access_token;
+			}
+			return token;
+		},
+		async session({ session, token }) {
+			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+			// @ts-ignore
+			session.user.accessToken = token.accessToken;
+
+			return session;
+		},
+	},
 });
