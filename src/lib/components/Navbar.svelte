@@ -1,5 +1,5 @@
 <script lang="ts">
-	import UserInfo from "$lib/components/atoms/UserInfo.svelte";
+	import UserInfo from "$lib/components/UserInfo.svelte";
 	import type { DefaultSession } from "@auth/core/types";
 	import { AppBar, Avatar, popup } from "@skeletonlabs/skeleton";
 	import type { PopupSettings } from "@skeletonlabs/skeleton";

@@ -1,9 +1,12 @@
 <script lang="ts">
+	import StackCard from "$lib/components/StackCard.svelte";
 	import type { PageData } from "./$types";
-	import { CodeBlock } from "@skeletonlabs/skeleton";
 
 	export let data: PageData;
 </script>
 
-<h1>SvelteKit Example</h1>
-<CodeBlock language="JSON" code={JSON.stringify(data.result, null, 2)} />
+<div class="grid grid-cols-4 grid-rows-4 gap-2">
+	{#each data.stacks as stack}
+		<StackCard {stack} />
+	{/each}
+</div>
