@@ -33,7 +33,7 @@ const refreshAccessToken = async (
 	});
 
 	const refreshedTokens = await response.json();
-	if (!response.ok) throw refreshedTokens;
+	if (!response.ok) return null;
 
 	const now = Date.now();
 	return {
@@ -81,6 +81,7 @@ export const handle = SvelteKitAuth({
 			return refreshAccessToken(token);
 		},
 		async session({ session, token }) {
+			if (!token) return session;
 			// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 			// @ts-ignore
 			session.user.accessToken = token.accessToken;

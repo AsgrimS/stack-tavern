@@ -4,4 +4,5 @@ export interface Stack {
 	description: string;
 	created_at: string;
 	user_id: number;
+	author_name: string;
 }
