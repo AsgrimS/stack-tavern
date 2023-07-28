@@ -13,7 +13,15 @@
 	export let session: DefaultSession | null;
 
 	let userInitials = "";
-	$: userInitials = session?.user ? "JG" : "";
+	$: userInitials = session?.user?.name ? getInitials(session.user.name) : "";
+
+	const getInitials = (name: string): string => {
+		const [firstName, lastName] = name.split(" ");
+
+		if (firstName && lastName) return `${firstName[0]}${lastName[0]}`;
+
+		return name.slice(0, 2);
+	};
 </script>
 
 <AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
