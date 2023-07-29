@@ -2,9 +2,16 @@ import { z } from "zod";
 
 // const noWhitespaceRegexp = /^\S*$/;
 
+export const technologySchema = z.object({
+	name: z.string(),
+	description: z.string().optional(),
+	purpose: z.string(),
+});
+
 export const stackSchema = z.object({
 	name: z.string(),
 	description: z.string(),
+	technologies: z.array(technologySchema),
 });
 
 // export const registerUserSchema = z

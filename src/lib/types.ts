@@ -3,8 +3,14 @@ export interface Stack {
 	name: string;
 	description?: string;
 	created_at: string;
-	user_id: number;
-	author_name: string;
+	author: User;
+	technologies: Technology[];
+}
+
+export interface User {
+	id: number;
+	name: string;
+	created_at: string;
 }
 
 export interface Technology {

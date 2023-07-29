@@ -17,7 +17,7 @@ export const load = (async (event) => {
 	// @ts-ignore
 	token = session.user.accessToken;
 
-	return { form };
+	return { form, session };
 }) satisfies PageServerLoad;
 
 export const actions = {
